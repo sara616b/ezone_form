@@ -1,0 +1,12 @@
+@use "vars" as *;
+
+@mixin minbreakpoint($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+@mixin maxbreakpoint($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
