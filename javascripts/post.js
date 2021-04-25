@@ -1,7 +1,11 @@
+import { headers } from "./settings.js";
+
+//TODO - insert right database link
+const link = "";
 export function post(data) {
   console.log("Posts data to backend");
   const postData = JSON.stringify(data);
-  fetch("https://frontenddatabases-cb0a.restdb.io/rest/videogames", {
+  fetch(link, {
     method: "post",
     headers: headers,
     body: postData,
