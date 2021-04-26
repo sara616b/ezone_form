@@ -1,17 +1,43 @@
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 50px;
-
-  width: 100%;
-
+body {
   background: #16152b;
-  border-radius: 5px;
+  display: grid;
+  place-content: center;
+
+  h1 {
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 20rem 0 20rem;
+  }
 }
-fieldset {
-  width: 100%;
-}
-legend {
-  color: white;
+
+.form_place {
+  display: grid;
+  place-content: center;
+
+  form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    width: 30vw;
+  }
+
+  fieldset {
+    border: none;
+    display: grid;
+    gap: 1rem;
+
+    legend {
+      font-size: larger;
+      margin-bottom: 1rem;
+    }
+  }
 }

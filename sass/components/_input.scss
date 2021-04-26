@@ -1,22 +1,36 @@
+$green: #5be080;
+$orange: #f48d69;
+
 // For styling all input fields
 
-input {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 10px;
-
-  width: 100%;
-  height: 60px;
-
-  background: #ffffff;
-  border-radius: 5px;
-}
-
 label {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
-  color: #ffffff;
+  display: grid;
+  gap: 5px;
+  position: static;
+
+  input {
+    align-self: stretch;
+    padding: 10px;
+    border: 1px solid #21212133;
+    background: rgb(240, 240, 240);
+  }
+
+  input:valid:not(:placeholder-shown, :focus) {
+    border-color: $green;
+  }
+
+  input:invalid:not(:placeholder-shown, :focus) {
+    border-color: $orange;
+  }
+
+  input:invalid:not(:placeholder-shown, :focus) + .error {
+    max-height: 2rem;
+  }
+
+  .error {
+    color: $orange;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s max-height;
+  }
 }
