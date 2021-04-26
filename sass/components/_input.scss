@@ -1,0 +1,22 @@
+// For styling all input fields
+
+input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+
+  width: 100%;
+  height: 60px;
+
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
