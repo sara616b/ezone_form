@@ -21,7 +21,6 @@ function prepareData() {
   //TODO - match values with html and restdb
   const platforms = createArrayToPost("platforms");
   const types = createArrayToPost("type");
-  const games = createArrayToPost("game");
   const areas = createArrayToPost("area");
 
   post({
@@ -33,7 +32,6 @@ function prepareData() {
     niveau: form.elements.niveau.value,
     platforms: platforms,
     types: types,
-    games: games,
     areas: areas,
   });
 }
