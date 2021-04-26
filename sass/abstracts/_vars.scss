@@ -13,3 +13,33 @@
   --grey-light: #a5a5ac;
   --grey-pastel: #e3e3e5;
 }
+
+@font-face {
+  font-family: "sharpiro";
+  src: url("../fonts/sharpiro-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sharpiro";
+  src: url("../fonts/sharpiro-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "uniform";
+  src: url("../fonts/uniform-pro-con-medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "uniform";
+  src: url("../fonts/uniform-pro-con-black.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  font-family: "sharpiro";
+}
