@@ -21,9 +21,8 @@
         <fieldset>
           <legend>Personal infomation</legend>
 
-          <div class="grid">
-            <label for="name">Full name</label>
-            <span class="error" id="err-name" aria-live="assertive">Must be at least 2 letters long</span>
+          
+          <label for="name">Full name
             <input
             type="text"
             name="name"
@@ -31,38 +30,44 @@
             required
             minlength="1"
             placeholder="First and last name"/>
-          </div>
+            <span class="error" id="err-name" aria-live="assertive">Must be at least 2 letters long</span>
+          </label>
 
-          <div class="grid">
-            <label for="email">Email</label>
-            <span class="error" id="err-mail" aria-live="assertive">Type in a valid email address</span>
+          
+          <label for="email">Email
             <input
             type="email"
             name="email"
             id="email"
             required
             placeholder="Must have an @"/>
-          </div>
+            <span class="error" id="err-name" aria-live="assertive">Type in a valid email address</span>
+          </label>
 
-          <div class="grid">
-            <label for="age"> Age</label>
-            <span class="error" id="err-age" aria-live="assertive">Type in a valid number</span>
+          
+          <label for="age">Age
             <input
             type="number"
             name="age"
             id="age"
             placeholder="&nbsp;"
             max="100"/>
-          </div>
+            <span class="error" id="err-name" aria-live="assertive">Type in a valid number</span>
+          </label>
 
-          <div class="grid">
-            <label for="contry">Contry / City</label>
+          
+          <label for="contry">Contry / City
             <input
               type="text"
               name="contry"
               id="contry"
-              placeholder="Contry City"/>
-          </div>
+              placeholder="Contry"/>
+              <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder="City"/>
+          </label>
 
         </fieldset>
 
