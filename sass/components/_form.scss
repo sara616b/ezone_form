@@ -4,17 +4,18 @@ body {
   place-content: center;
 
   h1 {
-    color: white;
+    color: #ffb591;
     text-align: center;
     margin-top: 2rem;
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   h2 {
     color: white;
     text-align: center;
-    font-size: 2rem;
-    margin: 0 20rem 0 20rem;
+    font-size: 1.3rem;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
@@ -23,11 +24,12 @@ body {
   place-content: center;
 
   form {
-    background: white;
+    background: #1d1b36;
+    color: white;
     padding: 20px;
     border-radius: 5px;
     margin-top: 2rem;
-    width: 30vw;
+    width: 35vw;
   }
 
   fieldset {

@@ -1,7 +1,7 @@
 $green: #5be080;
 $green-pastel: #dffcdf;
-$orange: #f48d69;
-$orange-pastel: #f8ddce;
+$red: #f46969;
+$red-pastel: #f8cece;
 
 // For styling all input fields
 
@@ -13,18 +13,18 @@ label {
   input {
     align-self: stretch;
     padding: 10px;
-    border: 1px solid #21212133;
+    border: 2px solid #21212133;
     background: rgb(240, 240, 240);
   }
 
   input:valid:not(:placeholder-shown, :focus) {
     border-color: $green;
-    background: $green-pastel;
+    //background: $green-pastel;
   }
 
   input:invalid:not(:placeholder-shown, :focus) {
-    border-color: $orange;
-    background: $orange-pastel;
+    border-color: $red;
+    //background: $red-pastel;
   }
 
   input:invalid:not(:placeholder-shown, :focus) + .error {
@@ -32,7 +32,7 @@ label {
   }
 
   .error {
-    color: $orange;
+    color: $red;
     max-height: 0;
     overflow: hidden;
     transition: 0.3s max-height;

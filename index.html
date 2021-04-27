@@ -22,46 +22,37 @@
           <legend>Personal infomation</legend>
 
           <label for="name">
-            Name
+            Full name
             <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              minlength="2"
-              placeholder="First and last name"
-            />
-            <span class="error" id="err-name" aria-live="assertive"
-              >Must be at least 2 letters long</span
-            >
+            type="text"
+            name="name"
+            id="name"
+            required
+            minlength="1"
+            placeholder="First and last name"/>
+            <span class="error" id="err-name" aria-live="assertive">Must be at least 2 letters long</span>
           </label>
 
           <label for="email">
-            E-mail
+            Email
             <input
-              type="email"
-              name="email"
-              id="email"
-              required
-              placeholder="Must have an @"
-            />
-            <span class="error" id="err-mail" aria-live="assertive"
-              >Type in a valid email address</span
-            >
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Must have an @"/>
+            <span class="error" id="err-mail" aria-live="assertive">Type in a valid email address</span>
           </label>
 
           <label for="age">
             Age
             <input
-              type="number"
-              name="age"
-              id="age"
-              placeholder="&nbsp;"
-              max="100"
-            />
-            <span class="error" id="err-age" aria-live="assertive"
-              >Type in a valid number</span
-            >
+            type="number"
+            name="age"
+            id="age"
+            placeholder="&nbsp;"
+            max="100"/>
+            <span class="error" id="err-age" aria-live="assertive">Type in a valid number</span>
           </label>
 
           <label for="contry">
@@ -70,8 +61,7 @@
               type="text"
               name="contry"
               id="contry"
-              placeholder="Contry City"
-            />
+              placeholder="Contry City"/>
           </label>
         </fieldset>
 
