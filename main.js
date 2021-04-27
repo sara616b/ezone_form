@@ -5,6 +5,9 @@ import { post } from "./javascripts/post.js";
 const formPersonal = document.querySelector("#personal");
 const formGaming = document.querySelector("#gaming");
 const formImprove = document.querySelector("#improve");
+const thanks = document.querySelector(".thanks");
+
+const forms = [formPersonal, formGaming, formImprove, thanks];
 
 window.addEventListener("DOMContentLoaded", init);
 function init() {
@@ -17,13 +20,17 @@ function init() {
   //hide all but first form
   hideSwitch(formGaming);
   hideSwitch(formImprove);
+  hideSwitch(thanks);
+
+  //check progress and update dots
+  checkProgress();
 
   //next + submit buttons
-  const forms = [formPersonal, formGaming, formImprove];
   forms.forEach((form) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       postToLocal(myStorage, e);
+      checkProgress();
     });
   });
 
@@ -35,12 +42,27 @@ function init() {
       if (formGaming.style.display !== "none") {
         hideSwitch(formGaming);
         hideSwitch(formPersonal);
+        checkProgress();
       } else if (formImprove.style.display !== "none") {
         hideSwitch(formGaming);
         hideSwitch(formImprove);
+        checkProgress();
       }
     });
   });
+}
+
+function checkProgress() {
+  console.log("checking progrees");
+  let dots = document.querySelectorAll(".dot");
+  for (let i = 0; i < forms.length; i++) {
+    if (forms[i].style.display == "none") {
+      dots[i].classList = "dot";
+    } else {
+      dots[i].classList = "dot chosen";
+    }
+    console.log("for loop");
+  }
 }
 
 function hideSwitch(toBeHidden) {
@@ -85,8 +107,7 @@ function postToLocal(storage, data) {
 
     //prepare data and then post to database
     prepareData(storage);
-    //set up thank you!
-    window.alert("THANKS FOR SIGNING UP!");
+    displayThanks();
 
     console.log(storage);
   }
@@ -120,5 +141,6 @@ function createArrayToPost(name) {
 }
 
 function displayThanks() {
-  console.log("Show thank you popup");
+  hideSwitch(formImprove);
+  hideSwitch(thanks);
 }
