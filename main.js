@@ -1,8 +1,7 @@
 import "./sass/style.scss";
 
-// import { post } from "./javascripts/post.js";
+import { post } from "./javascripts/post.js";
 
-//TODO - right form selected
 const formPersonal = document.querySelector("#personal");
 const formGaming = document.querySelector("#gaming");
 const formImprove = document.querySelector("#improve");
@@ -19,11 +18,27 @@ function init() {
   hideSwitch(formGaming);
   hideSwitch(formImprove);
 
+  //next + submit buttons
   const forms = [formPersonal, formGaming, formImprove];
   forms.forEach((form) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       postToLocal(myStorage, e);
+    });
+  });
+
+  //back buttons
+  document.querySelectorAll(".back").forEach((e) => {
+    e.addEventListener("click", (ev) => {
+      console.log("go back");
+      ev.preventDefault();
+      if (formGaming.style.display !== "none") {
+        hideSwitch(formGaming);
+        hideSwitch(formPersonal);
+      } else if (formImprove.style.display !== "none") {
+        hideSwitch(formGaming);
+        hideSwitch(formImprove);
+      }
     });
   });
 }
@@ -77,33 +92,18 @@ function postToLocal(storage, data) {
 
 function prepareData(myStorage) {
   console.log("Prepare data and post");
+  console.log(myStorage.getItem("platforms"));
 
   post({
     name: myStorage.getItem("name"),
     mail: myStorage.getItem("email"),
     age: myStorage.getItem("age"),
     country_city: myStorage.getItem("contry"),
-    level: myStorage.getItem("niveaus"),
-    platforms: myStorage.getItem("platforms"),
-    type: myStorage.getItem("genres"),
-    interests: myStorage.getItem("improvements"),
+    level: myStorage.getItem("niveaus").split(", "),
+    platforms: myStorage.getItem("platforms").split(", "),
+    type: myStorage.getItem("genres").split(", "),
+    interests: myStorage.getItem("improvements").split(", "),
   });
-}
-
-function post(data) {
-  console.log("Posts data to backend");
-  const postData = JSON.stringify(data);
-  fetch("https://ezone-765c.restdb.io/rest/info", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "x-apikey": "6085ef4128bf9b609975a699",
-      "cache-control": "no-cache",
-    },
-    body: postData,
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data));
 }
 
 function createArrayToPost(name) {
@@ -116,7 +116,6 @@ function createArrayToPost(name) {
   return arrayToReturn;
 }
 
-//TODO - idea! make a small popup that says "thanks for signing up"??
 function displayThanks() {
   console.log("Show thank you popup");
 }

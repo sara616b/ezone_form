@@ -1,3 +1,5 @@
+@use "sass/abstracts";
+
 $green: #5be080;
 $green-pastel: #dffcdf;
 $red: #f46969;
@@ -37,4 +39,56 @@ label {
     overflow: hidden;
     transition: 0.3s max-height;
   }
+}
+
+label[for="improve"],
+label[for="platform"],
+label[for="genre"] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  --size: 20px;
+  inline-size: var(--size);
+  block-size: var(--size);
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px rgb(128, 128, 128) solid;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 10px;
+}
+svg {
+  display: block;
+  position: absolute;
+  top: 2%;
+  left: 0px;
+  width: var(--size);
+  height: var(--size);
+  padding: 6px;
+
+  pointer-events: none;
+}
+svg path {
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: 1;
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke: var(--grey);
+  background-color: white;
+  transition: stroke-dashoffset 1s ease-out;
+}
+input[type="checkbox"]:checked {
+  border: 1px rgb(9, 114, 0) solid;
+  background-color: var(--green-pastel);
+}
+input[type="checkbox"]:checked + svg path {
+  stroke-dashoffset: 0;
 }
