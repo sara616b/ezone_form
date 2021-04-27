@@ -1,40 +1,38 @@
 $green: #5be080;
-$green-pastel: #dffcdf;
-$red: #f46969;
-$red-pastel: #f8cece;
+//$green-pastel: #dffcdf;
+$red: #f86363;
+//$red-pastel: #f8cece;
 
 // For styling all input fields
 
-label {
+.grid {
   display: grid;
   gap: 5px;
-  position: static;
+}
 
-  input {
-    align-self: stretch;
-    padding: 10px;
-    border: 2px solid #21212133;
-    background: rgb(240, 240, 240);
-  }
+input {
+  align-self: stretch;
+  padding: 10px;
+  border: 2px solid #21212133;
+  background: rgb(240, 240, 240);
+}
 
-  input:valid:not(:placeholder-shown, :focus) {
-    border-color: $green;
-    //background: $green-pastel;
-  }
+input:valid:not(:placeholder-shown, :focus) {
+  border-color: $green;
+}
 
-  input:invalid:not(:placeholder-shown, :focus) {
-    border-color: $red;
-    //background: $red-pastel;
-  }
+.error + input:invalid:not(:placeholder-shown, :focus) {
+  display: block;
+  border-color: $red;
 
-  input:invalid:not(:placeholder-shown, :focus) + .error {
-    max-height: 2rem;
-  }
+  background-position: right 16px center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><g fill='none' fill-rule='evenodd'><circle cx='10' cy='10' r='10' fill='%23f86363'/><path fill='%23FFFFFF' d='M9,6.84848485 C9,5.93939394 9.4,5.33333333 10,5.33333333 C10.6,5.33333333 11,5.93939394 11,6.84848485 L11,10.4848485 C11,11.3939394 10.6,12 10,12 C9.4,12 9,11.3939394 9,10.4848485 L9,6.84848485 Z M10,14.6666667 C9.41666667,14.6666667 9,14.25 9,13.6666667 C9,13.0833333 9.41666667,12.6666667 10,12.6666667 C10.5833333,12.6666667 11,13.0833333 11,13.6666667 C11,14.25 10.5833333,14.6666667 10,14.6666667 L10,14.6666667 Z'/></g></svg>");
+}
 
-  .error {
-    color: $red;
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.3s max-height;
-  }
+.error {
+  color: $red;
+  display: none;
+  transition: 0.3s display;
 }
