@@ -54,11 +54,13 @@ function hideSwitch(toBeHidden) {
 function postToLocal(storage, data) {
   const formEls = data.target.elements;
   if (data.target.id == "personal") {
+    console.log(formEls);
     console.log(formEls.name.value);
     storage.setItem("name", formEls.name.value);
     storage.setItem("email", formEls.email.value);
     storage.setItem("age", formEls.age.value);
     storage.setItem("contry", formEls.contry.value);
+    storage.setItem("city", formEls.city.value);
 
     hideSwitch(formPersonal);
     hideSwitch(formGaming);
@@ -98,7 +100,8 @@ function prepareData(myStorage) {
     name: myStorage.getItem("name"),
     mail: myStorage.getItem("email"),
     age: myStorage.getItem("age"),
-    country_city: myStorage.getItem("contry"),
+    country: myStorage.getItem("contry"),
+    city: myStorage.getItem("city"),
     level: myStorage.getItem("niveaus").split(", "),
     platforms: myStorage.getItem("platforms").split(", "),
     type: myStorage.getItem("genres").split(", "),
