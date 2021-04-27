@@ -1,3 +1,6 @@
+@use "sass/fonts/uniform/uniform.css";
+@use "sass/fonts/sharpiro/sharpiro.css";
+
 :root {
   --orange: #f48d69;
   --orange-light: #ffb591;
@@ -14,32 +17,11 @@
   --grey-pastel: #e3e3e5;
 }
 
-@font-face {
-  font-family: "sharpiro";
-  src: url("../fonts/sharpiro-regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sharpiro";
-  src: url("../fonts/sharpiro-bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
+* {
+  font-family: "uniformregular";
 }
 
-@font-face {
-  font-family: "uniform";
-  src: url("../fonts/uniform-pro-con-medium.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+// just to test out that sharpiro also works
+input {
+  font-family: "sharpiroregular";
 }
-@font-face {
-  font-family: "uniform";
-  src: url("../fonts/uniform-pro-con-black.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-
-// * {
-//   font-family: "sharpiro";
-// }
