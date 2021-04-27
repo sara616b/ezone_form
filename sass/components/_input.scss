@@ -1,5 +1,7 @@
 $green: #5be080;
+$green-pastel: #dffcdf;
 $orange: #f48d69;
+$orange-pastel: #f8ddce;
 
 // For styling all input fields
 
@@ -17,10 +19,12 @@ label {
 
   input:valid:not(:placeholder-shown, :focus) {
     border-color: $green;
+    background: $green-pastel;
   }
 
   input:invalid:not(:placeholder-shown, :focus) {
     border-color: $orange;
+    background: $orange-pastel;
   }
 
   input:invalid:not(:placeholder-shown, :focus) + .error {
