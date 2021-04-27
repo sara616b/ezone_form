@@ -1,15 +1,32 @@
 @use "sass/abstracts";
-button {
-  background: #3c2987;
-  color: #fff;
-  padding: 10px 12px 10px;
-  border-radius: 4px;
-  border: none;
-  float: right;
-  margin-top: 1rem;
-  margin-right: 0.7rem;
-}
 
-.back {
-  background-color: var(--grey-medium);
+.buttons {
+  display: flex;
+  justify-content: space-between;
+
+  .next,
+  .signUp {
+    background: #3c2987;
+    color: #fff;
+    padding: 10px 12px 10px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 1rem;
+    margin-right: 0.7rem;
+  }
+
+  .back {
+    background: var(--grey-medium);
+    color: #fff;
+    padding: 10px 12px 10px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+    place-self: self-start;
+  }
+
+  .none {
+    opacity: 0;
+  }
 }
