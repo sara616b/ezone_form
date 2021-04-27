@@ -9,47 +9,77 @@
   </head>
 
   <body>
-
     <h1>SIGN UP HERE</h1>
 
-    <h2>Sign up to recieve free personalized tips and tricks to improve your gaming performance!</h2>
+    <h2>
+      Sign up to recieve free personalized tips and tricks to improve your
+      gaming performance!
+    </h2>
 
     <section class="form_place">
       <form id="personal">
-
         <fieldset>
           <legend>Personal infomation</legend>
 
           <label for="name">
             Name
-            <input type="text" name="name" id="name" required minlength="2" placeholder="First and last name"/>
-            <span class="error" id="err-name" aria-live="assertive">Must be at least 2 letters long</span>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              minlength="2"
+              placeholder="First and last name"
+            />
+            <span class="error" id="err-name" aria-live="assertive"
+              >Must be at least 2 letters long</span
+            >
           </label>
 
           <label for="email">
             E-mail
-            <input type="email" name="email" id="email" required placeholder="Must have an @"/>
-            <span class="error" id="err-mail" aria-live="assertive">Type in a valid email address</span>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Must have an @"
+            />
+            <span class="error" id="err-mail" aria-live="assertive"
+              >Type in a valid email address</span
+            >
           </label>
 
           <label for="age">
             Age
-            <input type="number" name="age" id="age" placeholder="&nbsp;" max="100"/>
-            <span class="error" id="err-age" aria-live="assertive">Type in a valid number</span>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              placeholder="&nbsp;"
+              max="100"
+            />
+            <span class="error" id="err-age" aria-live="assertive"
+              >Type in a valid number</span
+            >
           </label>
 
           <label for="contry">
             Contry / City
-            <input type="text" name="contry" id="contry" placeholder="Contry City"/>
+            <input
+              type="text"
+              name="contry"
+              id="contry"
+              placeholder="Contry City"
+            />
           </label>
-
         </fieldset>
 
         <button type="submit">NEXT</button>
       </form>
     </section>
 
-    <section class="form_place" style="display: none;">
+    <section class="form_place">
       <form id="gaming">
         <fieldset>
           <legend>Gaming infomation</legend>
@@ -212,7 +242,7 @@
       </form>
     </section>
 
-    <section class="form_place" style="display: none;">
+    <section class="form_place">
       <form id="improve">
         <fieldset>
           <legend>What do you want to improve?</legend>
