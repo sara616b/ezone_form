@@ -1,0 +1,71 @@
+/*SLIDER*/
+
+
+.switch {
+    display: flex;
+    position: relative;
+    width: 17rem;
+    margin-top: 0.7rem;
+    padding: 0 1rem;
+    font-family: verdana;
+    &:before {
+      content: '  ';
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 3rem;
+      background: #000;
+      border-radius: 30px;
+    }
+    &__label {
+      justify-content: space-around;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      z-index: 20;
+      transition: color 200ms ease-out;
+      &:hover {
+        color: #CACEFC;
+      }
+    }
+    &__indicator {
+      width: 1.7rem;
+      height: 1.7rem;
+      position: absolute;
+      top: 11.5px;
+      left: 0;
+      border-radius: 50%;
+      transition: transform 600ms cubic-bezier(.02,.94,.09,.97),
+                  background 300ms cubic-bezier(.17,.67,.14,1.03);
+      transform: translate3d(1rem,0,0);
+    }
+  
+    input#one:checked ~ .switch__indicator {
+      background: #5BE080;
+      transform: translate3d(1.89rem,0,0);
+    }
+    input#two:checked ~ .switch__indicator {
+      background: #5BE080;
+      transform: translate3d(5.26rem,0,0);
+    }
+    input#three:checked ~ .switch__indicator {
+      background: #5BE080;
+      transform: translate3d(8.64rem,0,0);
+    }
+     input#four:checked ~ .switch__indicator {
+      background: #5BE080;
+      transform: translate3d(12.08rem,0,0);
+    }
+    input#five:checked ~ .switch__indicator {
+      background: #5BE080;
+      transform: translate3d(15.4rem,0,0);
+    }
+    input[type="radio"] {
+      &:not(:checked),
+      &:checked {
+        display: none;
+      }
+    }
+  }
