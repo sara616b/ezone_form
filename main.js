@@ -94,8 +94,15 @@ function postToLocal(storage, data) {
     console.log(storage);
   } else if (data.target.id == "gaming") {
     //FIX NIVEAU ALL OVER
-    const niveaus = createArrayToPost("niveau");
-    storage.setItem("niveaus", niveaus);
+    const niveaus = document.querySelectorAll("input[name='switch']");
+    let niveauChosen;
+    niveaus.forEach((level) => {
+      if (level.checked) {
+        console.log(level.id);
+        niveauChosen = level.id;
+      }
+    });
+    storage.setItem("niveaus", niveauChosen);
     const genres = createArrayToPost("genre");
     storage.setItem("genres", genres);
     const platforms = createArrayToPost("platform");
@@ -127,7 +134,7 @@ function prepareData(myStorage) {
     age: myStorage.getItem("age"),
     country: myStorage.getItem("contry"),
     city: myStorage.getItem("city"),
-    level: myStorage.getItem("niveaus").split(", "),
+    level: myStorage.getItem("niveaus"),
     platforms: myStorage.getItem("platforms").split(", "),
     type: myStorage.getItem("genres").split(", "),
     interests: myStorage.getItem("improvements").split(", "),
