@@ -31,13 +31,19 @@
     gap: 1rem;
     legend {
       font-size: larger;
-      margin-bottom: -0.5rem;
+      margin-bottom: -1.5rem;
     }
     @-moz-document url-prefix() {
       legend {
         font-size: larger;
         margin-bottom: -0.5rem;
       }
+    }
+  }
+  fieldset:nth-of-type(2) {
+    legend {
+      margin-bottom: -0.5rem;
+      margin-top: 0.5rem;
     }
   }
 }
