@@ -156,4 +156,7 @@ function createArrayToPost(name) {
 function displayThanks() {
   hideSwitch(formImprove);
   hideSwitch(thanks);
+  document.querySelector("h1").style.display = "none";
+  document.querySelector("h2").style.display = "none";
+  document.querySelector("body").style.paddingTop = "50px";
 }
