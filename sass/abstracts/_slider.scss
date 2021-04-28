@@ -44,23 +44,23 @@
   
     input#one:checked ~ .switch__indicator {
       background: #5BE080;
-      transform: translate3d(1.89rem,0,0);
+      transform: translate3d(1.69rem,0,0);
     }
     input#two:checked ~ .switch__indicator {
       background: #5BE080;
-      transform: translate3d(5.26rem,0,0);
+      transform: translate3d(4.65rem,0,0);
     }
     input#three:checked ~ .switch__indicator {
       background: #5BE080;
-      transform: translate3d(8.64rem,0,0);
+      transform: translate3d(7.68rem,0,0);
     }
      input#four:checked ~ .switch__indicator {
       background: #5BE080;
-      transform: translate3d(12.08rem,0,0);
+      transform: translate3d(10.68rem,0,0);
     }
     input#five:checked ~ .switch__indicator {
       background: #5BE080;
-      transform: translate3d(15.4rem,0,0);
+      transform: translate3d(13.63rem,0,0);
     }
     input[type="radio"] {
       &:not(:checked),
