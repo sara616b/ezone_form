@@ -1,5 +1,4 @@
 import "./sass/style.scss";
-
 import { post } from "./javascripts/post.js";
 
 const formPersonal = document.querySelector("#personal");
@@ -28,6 +27,7 @@ function init() {
   //next + submit buttons
   forms.forEach((form) => {
     form.addEventListener("submit", (e) => {
+      window.scrollTo(0, 0);
       e.preventDefault();
       postToLocal(myStorage, e);
       checkProgress();
@@ -38,6 +38,7 @@ function init() {
   document.querySelectorAll(".back").forEach((e) => {
     e.addEventListener("click", (ev) => {
       console.log("go back");
+      window.scrollTo(0, 0);
       ev.preventDefault();
       if (formGaming.style.display !== "none") {
         hideSwitch(formGaming);
@@ -52,6 +53,7 @@ function init() {
   });
 }
 
+//checks which form is visible and updates progress bar accordingly
 function checkProgress() {
   console.log("checking progrees");
   let dots = document.querySelectorAll(".dot");
@@ -65,6 +67,7 @@ function checkProgress() {
   }
 }
 
+//toggles the class hidden on the element passed
 function hideSwitch(toBeHidden) {
   if (toBeHidden.style.display == "none") {
     toBeHidden.style.display = "flex";
@@ -73,6 +76,7 @@ function hideSwitch(toBeHidden) {
   }
 }
 
+//post data from the appropriate form to local storage
 function postToLocal(storage, data) {
   const formEls = data.target.elements;
   if (data.target.id == "personal") {
@@ -113,9 +117,9 @@ function postToLocal(storage, data) {
   }
 }
 
+//prepares data and sends it to be posted to the database
 function prepareData(myStorage) {
   console.log("Prepare data and post");
-  console.log(myStorage.getItem("platforms"));
 
   post({
     name: myStorage.getItem("name"),
@@ -130,6 +134,7 @@ function prepareData(myStorage) {
   });
 }
 
+//creates an array from inputs with the passed name that are checked
 function createArrayToPost(name) {
   const arrayToReturn = [];
   const arrayElements = document.querySelectorAll(
@@ -140,6 +145,7 @@ function createArrayToPost(name) {
   return arrayToReturn;
 }
 
+//display thank you for signing up
 function displayThanks() {
   hideSwitch(formImprove);
   hideSwitch(thanks);

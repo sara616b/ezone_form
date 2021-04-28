@@ -2,8 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 img {
   width: 100%;
+}
+
+a:hover,
+input:hover,
+label:hover,
+button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  transition: all 0.3s;
 }

@@ -1,4 +1,5 @@
 @use "sass/abstracts";
+@use "sass/abstracts/mixins";
 #progress {
   display: flex;
   flex-direction: row;
@@ -19,9 +20,20 @@
     display: flex;
     font-weight: bolder;
     transition: all 1s;
+    font-size: 1rem;
+    @include mixins.maxbreakpoint(500px) {
+      width: 30px;
+      height: 30px;
+      font-size: 0.9rem;
+    }
   }
-
+  .dot:last-of-type {
+    @include mixins.maxbreakpoint(500px) {
+      font-size: 0.5rem;
+    }
+  }
   .chosen {
     background-color: var(--grey-light);
+    box-shadow: white 0px 0px 10px;
   }
 }
