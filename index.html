@@ -93,30 +93,6 @@
           <legend>Gaming infomation</legend>
 
           <fieldset>
-            <legend>Niveau</legend>
-
-            <label for="niveau">
-              Beginner
-              <input type="radio" name="niveau" id="niveau" />
-            </label>
-
-            <label for="niveau">
-              Normal?
-              <input type="radio" name="niveau" id="niveau" />
-            </label>
-
-            <label for="niveau">
-              Pro
-              <input type="radio" name="niveau" id="niveau" />
-            </label>
-
-            <label for="niveau">
-              Expert
-              <input type="radio" name="niveau" id="niveau" />
-            </label>
-          </fieldset>
-
-          <fieldset>
             <legend>Type / genre</legend>
 
             <label for="genre">
@@ -344,6 +320,27 @@
               </svg>
             </label>
           </fieldset>
+
+          <fieldset>
+            <div class="form-control">
+                    <legend>Your level</legend>
+                <br>
+                <span id="hint">From beginner (1) to advanced (5)</span>
+                <div class="switch">
+                    <input name="switch" id="one" type="radio" checked/>
+                    <label for="one" class="switch__label">1</label>
+                    <input name="switch" id="two" type="radio" />
+                    <label for="two" class="switch__label">2</label>
+                    <input name="switch" id="three" type="radio" />
+                    <label for="three" class="switch__label" >3</label>
+                    <input name="switch" id="four" type="radio" />
+                    <label for="four" class="switch__label" >4</label>
+                    <input name="switch" id="five" type="radio" />
+                    <label for="five" class="switch__label" >5</label>
+                    <div class="switch__indicator"></div>
+                </div>
+            </div>
+        </fieldset>
 
           <fieldset>
             <legend>Platform(s)</legend>
